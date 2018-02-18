@@ -43,7 +43,7 @@
             android:layout_marginRight="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/also_known_label"
-            tools:text="Lorem, ipsum, dolor, sit, amet, consectetur, elit, Vestibulum, velit, orci, tristique eu ante vitae." />
+            tools:text="@string/other_names_mock_text" />
 
         <TextView
             android:id="@+id/description_label"
@@ -67,7 +67,7 @@
             android:layout_marginRight="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/description_label"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+            tools:text="@string/description_lorem_mock_text" />
 
         <TextView
             android:id="@+id/origin_label"
@@ -98,8 +98,9 @@
             android:id="@+id/ingredients_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="@string/detail_ingredients_label"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -110,10 +111,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginRight="8dp"
+            android:paddingBottom="24dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ingredients_label"
-            tools:text="this, is a long, list, of ingridients, for the best, sandwitch, in the world" />
+            tools:text="@string/ingredients_mock_text" />
 
 
     </android.support.constraint.ConstraintLayout>
