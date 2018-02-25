@@ -15,15 +15,18 @@ import com.udacity.sandwichclub.utils.JsonUtils;
 
 import org.w3c.dom.Text;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class DetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
-    private TextView mKnownAsTextView;
-    private TextView mDescriptionTextView;
-    private TextView mOriginTextView;
-    private TextView mIngridientsTextView;
-    private ImageView mSandwichImage;
+    @BindView(R.id.also_known_tv) TextView mKnownAsTextView;
+    @BindView(R.id.description_tv) TextView mDescriptionTextView;
+    @BindView(R.id.origin_tv) TextView mOriginTextView;
+    @BindView(R.id.ingredients_tv) TextView mIngridientsTextView;
+    @BindView(R.id.image_iv) ImageView mSandwichImage;
     private Sandwich mSandwich;
 
     @Override
@@ -31,11 +34,14 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        mKnownAsTextView = findViewById(R.id.also_known_tv);
-        mSandwichImage = findViewById(R.id.image_iv);
-        mDescriptionTextView = findViewById(R.id.description_tv);
-        mOriginTextView = findViewById(R.id.origin_tv);
-        mIngridientsTextView = findViewById(R.id.ingredients_tv);
+        /* ButterKnife gets rid of findViewByIds, but the fields must be package private (no qualifier) */
+        ButterKnife.setDebug(true);
+        ButterKnife.bind(this);
+//        mKnownAsTextView = findViewById(R.id.also_known_tv);
+//        mSandwichImage = findViewById(R.id.image_iv);
+//        mDescriptionTextView = findViewById(R.id.description_tv);
+//        mOriginTextView = findViewById(R.id.origin_tv);
+//        mIngridientsTextView = findViewById(R.id.ingredients_tv);
 
         Intent intent = getIntent();
         if (intent == null) {
